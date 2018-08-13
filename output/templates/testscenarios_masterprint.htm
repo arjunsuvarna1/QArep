@@ -1,0 +1,51 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}"><span>{$pagetitlelabel testscenarios masterprint}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table {$bsmasterprintgrid_hiddenattr} data-pageid="{$pageid}" data-brick="bsmasterprintgrid" class="table rnr-b-mastergridfields rnr-gridtable" >
+		<thead>
+		<tr>
+			<th class="{$TestScenrio_Id_class}">{$label testscenarios TestScenrio_Id}</th>
+			<th class="{$TestType_class}">{$label testscenarios TestType}</th>
+			<th class="{$Module_class}">{$label testscenarios Module}</th>
+			<th class="{$TestScenario_class}">{$label testscenarios TestScenario}</th>
+			<th class="{$Summary_class}">{$label testscenarios Summary}</th>
+			<th class="{$UAT_class}">{$label testscenarios UAT}</th>
+			<th class="{$QA_class}">{$label testscenarios QA}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="{$TestScenrio_Id_class}">{$TestScenrio_Id_mastervalue}</td>
+			<td class="{$TestType_class}">{$TestType_mastervalue}</td>
+			<td class="{$Module_class}">{$Module_mastervalue}</td>
+			<td class="{$TestScenario_class}">{$TestScenario_mastervalue}</td>
+			<td class="{$Summary_class}">{$Summary_mastervalue}</td>
+			<td class="{$UAT_class}">{$UAT_mastervalue}</td>
+			<td class="{$QA_class}">{$QA_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

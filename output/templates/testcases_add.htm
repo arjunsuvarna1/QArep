@@ -1,0 +1,388 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel testcases add}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>View</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Edit</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+		<div class="bs-details">
+		{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+	{$master_heading}
+	</div>
+	<div class="panel-body">
+{$showmasterfile}
+	</div>
+</div>
+{END mastertable_block}
+	</div>
+			{BEGIN TestScenrio_Id_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TestScenrio_Id}" data-fieldname="TestScenrio_Id" data-signal-error-for="TestScenrio_Id{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TestScenrio_Id}">
+		{BEGIN TestScenrio_Id_label}{$label testcases TestScenrio_Id}{END TestScenrio_Id_label}
+	</label>
+	<div class="col-md-6" >
+		{$TestScenrio_Id_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TestScenrio_Id">
+		<div class="text-muted" >
+		{$tooltip testcases TestScenrio_Id}
+		</div>
+	</div>
+</div>
+</div>
+{END TestScenrio_Id_fieldblock}
+
+			{BEGIN TestCaseId_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TestCaseId}" data-fieldname="TestCaseId" data-signal-error-for="TestCaseId{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TestCaseId}">
+		{BEGIN TestCaseId_label}{$label testcases TestCaseId}{END TestCaseId_label}
+	</label>
+	<div class="col-md-6" >
+		{$TestCaseId_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TestCaseId">
+		<div class="text-muted" >
+		{$tooltip testcases TestCaseId}
+		</div>
+	</div>
+</div>
+</div>
+{END TestCaseId_fieldblock}
+
+			{BEGIN TestCase_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TestCase}" data-fieldname="TestCase" data-signal-error-for="TestCase{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TestCase}">
+		{BEGIN TestCase_label}{$label testcases TestCase}{END TestCase_label}
+	</label>
+	<div class="col-md-6" >
+		{$TestCase_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TestCase">
+		<div class="text-muted" >
+		{$tooltip testcases TestCase}
+		</div>
+	</div>
+</div>
+</div>
+{END TestCase_fieldblock}
+
+			{BEGIN Summary_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Summary}" data-fieldname="Summary" data-signal-error-for="Summary{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Summary}">
+		{BEGIN Summary_label}{$label testcases Summary}{END Summary_label}
+	</label>
+	<div class="col-md-6" >
+		{$Summary_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Summary">
+		<div class="text-muted" >
+		{$tooltip testcases Summary}
+		</div>
+	</div>
+</div>
+</div>
+{END Summary_fieldblock}
+
+			{BEGIN TestEnvironment_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TestEnvironment}" data-fieldname="TestEnvironment" data-signal-error-for="TestEnvironment{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TestEnvironment}">
+		{BEGIN TestEnvironment_label}{$label testcases TestEnvironment}{END TestEnvironment_label}
+	</label>
+	<div class="col-md-6" >
+		{$TestEnvironment_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TestEnvironment">
+		<div class="text-muted" >
+		{$tooltip testcases TestEnvironment}
+		</div>
+	</div>
+</div>
+</div>
+{END TestEnvironment_fieldblock}
+
+			{BEGIN TestResult_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TestResult}" data-fieldname="TestResult" data-signal-error-for="TestResult{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TestResult}">
+		{BEGIN TestResult_label}{$label testcases TestResult}{END TestResult_label}
+	</label>
+	<div class="col-md-6" >
+		{$TestResult_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TestResult">
+		<div class="text-muted" >
+		{$tooltip testcases TestResult}
+		</div>
+	</div>
+</div>
+</div>
+{END TestResult_fieldblock}
+
+			{BEGIN Comment_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Comment}" data-fieldname="Comment" data-signal-error-for="Comment{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Comment}">
+		{BEGIN Comment_label}{$label testcases Comment}{END Comment_label}
+	</label>
+	<div class="col-md-6" >
+		{$Comment_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Comment">
+		<div class="text-muted" >
+		{$tooltip testcases Comment}
+		</div>
+	</div>
+</div>
+</div>
+{END Comment_fieldblock}
+
+			{BEGIN QA_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_QA}" data-fieldname="QA" data-signal-error-for="QA{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_QA}">
+		{BEGIN QA_label}{$label testcases QA}{END QA_label}
+	</label>
+	<div class="col-md-6" >
+		{$QA_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="QA">
+		<div class="text-muted" >
+		{$tooltip testcases QA}
+		</div>
+	</div>
+</div>
+</div>
+{END QA_fieldblock}
+
+			
+		
+
+
+
+
+
+{BEGIN details_table1}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">Table1
+		<span>
+{BEGIN details_inlineadd_table1_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_table1_attrs}>Inline Add</button>
+{END details_inlineadd_table1_link}		
+{BEGIN details_add_table1_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_table1_attrs}>Add new</button>
+{END details_add_table1_link}
+{BEGIN details_edit_table1_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_table1_attrs}>Edit</button>
+{END details_edit_table1_link}
+{BEGIN details_updateselected_table1_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_table1_attrs}>Update selected</button>
+{END details_updateselected_table1_link}
+
+
+{BEGIN details_delete_table1_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_table1_attrs}>Delete</button>
+{END details_delete_table1_link}
+
+{BEGIN saveall_table1_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_table1_attrs} {$savealllink_table1_span}>Save all</button>
+{END saveall_table1_link}
+{BEGIN cancelall_table1_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_table1_attrs} {$cancelalllink_table1_span}>Cancel</button>
+{END cancelall_table1_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_table1}
+</div>
+</div>
+</div>
+{END details_table1}
+	
+	
+	
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>Save</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">Reset</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">Back to list</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">Cancel</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

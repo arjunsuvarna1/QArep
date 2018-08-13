@@ -1,0 +1,378 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-edit" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN editheader}
+	<h2 {$editheader_hiddenattr} data-pageid="{$pageid}" data-brick="editheader" >{$pagetitlelabel testscenarios edit}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END editheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>View</button>
+{END view_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$editfields_hiddenattr} data-pageid="{$pageid}" data-brick="editfields" class="form-horizontal" role="form">
+
+
+
+			{BEGIN TestType_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TestType}" data-fieldname="TestType" data-signal-error-for="TestType{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TestType}">
+		{BEGIN TestType_label}{$label testscenarios TestType}{END TestType_label}
+	</label>
+	<div class="col-md-6" >
+		{$TestType_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TestType">
+		<div class="text-muted" >
+		{$tooltip testscenarios TestType}
+		</div>
+	</div>
+</div>
+</div>
+{END TestType_fieldblock}
+
+			{BEGIN Module_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Module}" data-fieldname="Module" data-signal-error-for="Module{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Module}">
+		{BEGIN Module_label}{$label testscenarios Module}{END Module_label}
+	</label>
+	<div class="col-md-6" >
+		{$Module_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Module">
+		<div class="text-muted" >
+		{$tooltip testscenarios Module}
+		</div>
+	</div>
+</div>
+</div>
+{END Module_fieldblock}
+
+			{BEGIN TestScenario_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TestScenario}" data-fieldname="TestScenario" data-signal-error-for="TestScenario{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TestScenario}">
+		{BEGIN TestScenario_label}{$label testscenarios TestScenario}{END TestScenario_label}
+	</label>
+	<div class="col-md-6" >
+		{$TestScenario_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TestScenario">
+		<div class="text-muted" >
+		{$tooltip testscenarios TestScenario}
+		</div>
+	</div>
+</div>
+</div>
+{END TestScenario_fieldblock}
+
+			{BEGIN Summary_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Summary}" data-fieldname="Summary" data-signal-error-for="Summary{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Summary}">
+		{BEGIN Summary_label}{$label testscenarios Summary}{END Summary_label}
+	</label>
+	<div class="col-md-6" >
+		{$Summary_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Summary">
+		<div class="text-muted" >
+		{$tooltip testscenarios Summary}
+		</div>
+	</div>
+</div>
+</div>
+{END Summary_fieldblock}
+
+			{BEGIN UAT_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_UAT}" data-fieldname="UAT" data-signal-error-for="UAT{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_UAT}">
+		{BEGIN UAT_label}{$label testscenarios UAT}{END UAT_label}
+	</label>
+	<div class="col-md-6" >
+		{$UAT_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="UAT">
+		<div class="text-muted" >
+		{$tooltip testscenarios UAT}
+		</div>
+	</div>
+</div>
+</div>
+{END UAT_fieldblock}
+
+			{BEGIN QA_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_QA}" data-fieldname="QA" data-signal-error-for="QA{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_QA}">
+		{BEGIN QA_label}{$label testscenarios QA}{END QA_label}
+	</label>
+	<div class="col-md-6" >
+		{$QA_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="QA">
+		<div class="text-muted" >
+		{$tooltip testscenarios QA}
+		</div>
+	</div>
+</div>
+</div>
+{END QA_fieldblock}
+
+			
+		
+
+
+
+
+
+{BEGIN details_testcases}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">Test Cases
+		<span>
+{BEGIN details_inlineadd_testcases_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_testcases_attrs}>Inline Add</button>
+{END details_inlineadd_testcases_link}		
+{BEGIN details_add_testcases_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_testcases_attrs}>Add new</button>
+{END details_add_testcases_link}
+{BEGIN details_edit_testcases_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_testcases_attrs}>Edit</button>
+{END details_edit_testcases_link}
+{BEGIN details_updateselected_testcases_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_testcases_attrs}>Update selected</button>
+{END details_updateselected_testcases_link}
+
+
+{BEGIN details_delete_testcases_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_testcases_attrs}>Delete</button>
+{END details_delete_testcases_link}
+
+{BEGIN saveall_testcases_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_testcases_attrs} {$savealllink_testcases_span}>Save all</button>
+{END saveall_testcases_link}
+{BEGIN cancelall_testcases_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_testcases_attrs} {$cancelalllink_testcases_span}>Cancel</button>
+{END cancelall_testcases_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_testcases}
+</div>
+</div>
+</div>
+{END details_testcases}
+	
+	
+	
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN editbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>Save</button>
+	{END save_button}
+	{BEGIN updsel_button}
+	<button class="btn btn-primary" {$updselbutton_attrs}>{$update_selected}</button>
+	{END updsel_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" {$backbutton_attrs}>Back to list</button>
+	{END back_button}
+	{BEGIN close_button}
+	<a href="#" class="btn btn-default" {$closebutton_attrs}>Cancel</a>
+	{END close_button}
+
+{END editbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN righteditbuttons}
+<div class="btn-group" role="group">
+
+	{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default  {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+			{BEGIN reset_button}
+				<li><a href="#" {$resetbutton_attrs}>Reset</a></li>
+			{END reset_button}
+			{BEGIN view_page_button}
+				<li><a href="#" {$view_page_button_attrs}>View</a></li>
+			{END view_page_button}
+		</ul>
+	</div>
+</div>
+{END righteditbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>
